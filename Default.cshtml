@@ -1,0 +1,110 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "The Student Forum";
+}
+<style>
+    #def
+    {
+        padding: 0;
+        list-style: none;
+    }
+    #liInfo
+    {
+        width: 350px;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        line-height: 21px;
+    }
+    #hov{
+        display: block;
+        padding: 5px 10px;
+        color: #333;
+        background: #f2f2f2;
+        text-decoration: none;
+    }
+    
+</style>
+ <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> <script type="text/javascript" src="js/jssor.js"></script>
+ <script type="text/javascript" src="js/jssor.slider.js"></script>
+<script>
+        jQuery(document).ready(function ($) {
+            //Reference http://www.jssor.com/development/slider-with-slideshow-jquery.html
+            //Reference http://www.jssor.com/development/tool-slideshow-transition-viewer.html
+
+            var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 1200, $Opacity: 2 }
+            ];
+
+            var options = {
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 1500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+        });
+
+    </script>
+     <div id="slider1_container" style="position: relative; width: 600px;
+        height: 300px;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+
+        <div u="slides" style="cursor: move; position: absolute; left: auto; top: 0px; width: 900px; height: 300px;
+            overflow: hidden;">
+            <div>
+                <img alt="image" src="img/1.jpg" width="1000px" height="300px"/>
+            </div>
+            <div>
+                <img alt="image" src="img/2.jpg" width="1000px" height="300px"/>
+            </div>
+            <div>
+                <img alt="image" src="img/3.jpg" width="1000px" height="300px"/>
+            </div>
+            <div>
+                <img alt="img4" src="img/4.jpg" width="1000px" height="300px"/>
+            </div>
+        </div>
+        <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
+    </div>
+
+@section featured {
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@Page.Title</h1>
+    </div>
+</section>
+}
+
+<div>
+    <ul style="color: #999;">
+        
+        <li><h2 style="color: #999;">Provides study material for CSE.</h2></li>
+        <li><h2 style="color: #999;">Softwares needed for students.</h2></li>
+        <li><h2 style="color: #999;">Provides certification on trending courses.</h2></li>
+        <li><h2 style="color: #999;">Explores the technical world through emerging technologies.</h2></li>
+        <li><h2 style="color: #999;">Helps students' to get placed in MNCs by providing training materials.</h2></li>
+    </ul>
+    </h2>
+</div>

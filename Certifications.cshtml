@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Certifications";
+}
+@if (WebSecurity.IsAuthenticated) {
+                            
+                        } else {
+                            Response.Redirect("~/Account/Login");
+                        }
+
+@section featured {
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@Page.Title</h1>
+    </div>
+</section>
+}
+<span style="font-size: 20px;">
+                <div style="height: 400px; width: 40%; position: relative;left: auto;float: left;">
+                    <p style="font-family: 'Segoe UI'; font-weight: bold; font-size: larger; ">Most Popular Certificates:- </p>
+                    <ul class="disk">
+                        <li><a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=653&get_params=p_id:154" style="text-decoration: none">OCJP Certification</a></li>
+                        <li><a href="http://www.w3schools.com/cert/cert_php.asp" style="text-decoration: none">PHP Certification</a></li>
+                        <li><a href="https://www.microsoft.com/learning/en-in/exam-70-483.aspx" style="text-decoration: none">C# .NET</a></li>
+                        <li><a href="http://www.cloudera.com/content/www/en-us/training/certification.html" style="text-decoration: none">Hadoop Certification</a></li>
+                    </ul>
+                </div>
+
+                <div style="height: 400px; width: 29%; left: auto;float: left;position: relative;">
+                    <p style="font-family: 'Segoe UI'; font-weight: bold; font-size: larger;">Our Associates:- </p>
+                    <ul class="disk">
+                        <li>XYZ Corporation</li>
+                        <li>PQR Corporation</li>
+                        <li>MNO Corporation</li>
+                        <li>ABC Corporation</li>
+                    </ul>
+                </div>
+                <div style="height: 400px; width: 31%; float: right; position: relative; ">
+                    <p style="font-family: 'Segoe UI'; font-weight: bold; font-size: larger;">Study Materials for Certifications:- </p>
+                    <ul class="disk">
+                        <li style="font-size: smaller;">Oracle Certification Course Material - <strike style="color: #f00">Rs. 15,999</strike>&nbsp; Rs. 7,999</li>
+                        <br>
+                        <li style="font-size: smaller;">Azure Certification Course Material - <strike style="color: #f00">Rs. 79,999</strike>&nbsp; Rs. 24,999</li>
+                        <br>
+                        <li style="font-size: smaller;">Hadoop Certification Course Material - <strike style="color: #f00">Rs. 24,999</strike>&nbsp; Rs. 14,999</li>
+                    </ul></span>

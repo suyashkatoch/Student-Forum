@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Emerging Technologies";
+}
+@section featured {
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@Page.Title</h1>
+    </div>
+</section>
+}
+ <div style="height: 900px; width: 55%; float: left;">
+                        <p style="font-family: 'Segoe UI'; font-size: larger; ">Trending Technologies....</p>
+                        <br />
+                            <p style="font-family: 'Segoe UI'; font-size: large; font-weight: bolder; "><u>An introduction to Apache Hadoop for big data</u></p>
+                            <p style="font-family: 'Segoe UI'; font-size: medium; font-weight: bold;" >Apache Hadoop is an open source software framework for storage and large scale processing of data-sets on clusters of commodity hardware. Hadoop is an Apache top-level project being built and used by a global community of contributors and users. It is licensed under the Apache License 2.0.
+                            Hadoop was created by Doug Cutting and Mike Cafarella in 2005. It was originally developed to support distribution for the Nutch search engine project. Doug, who was working at Yahoo! at the time and is now Chief Architect of Cloudera, named the project after his son's toy elephant. Cutting's son was 2 years old at the time and just beginning to talk. He called his beloved stuffed yellow elephant "Hadoop" (with the stress on the first syllable). Now 12, Doug's son often exclaims, "Why don't you say my name, and why don't I get royalties? I deserve to be famous for this!"
+
+The Apache Hadoop framework is composed of the following modules
+
+Hadoop Common: contains libraries and utilities needed by other Hadoop modules
+Hadoop Distributed File System (HDFS): a distributed file-system that stores data on the commodity machines, providing very high aggregate bandwidth across the cluster
+Hadoop YARN: a resource-management platform responsible for managing compute resources in clusters and using them for scheduling of users' applications
+Hadoop MapReduce: a programming model for large scale data processing
+All the modules in Hadoop are designed with a fundamental assumption that hardware failures (of individual machines, or racks of machines) are common and thus should be automatically handled in software by the framework. Apache Hadoop's MapReduce and HDFS components originally derived respectively from Google's MapReduce and Google File System (GFS) papers.
+The Hadoop framework itself is mostly written in the Java programming language, with some native code in C and command line utilities written as shell-scripts.</p>
+                    </div>
+                <div style="height: 400px; width: 30%; float: right" >
+                <p style="font-family: 'Segoe Marker'; font-size: larger; font-weight: bolder;">Video Class related to Hadoop</p>
+                    <iframe width="420" height="345" src="https://www.youtube.com/embed/Pq3OyQO-l3E" frameborder="0" allowfullscreen>
+                    </iframe>
